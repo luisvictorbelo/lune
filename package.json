@@ -1,0 +1,48 @@
+{
+  "name": "lune",
+  "version": "1.0.0",
+  "description": "Discord bot to track game prices",
+  "keywords": [
+    "discord",
+    "bot",
+    "game",
+    "prices"
+  ],
+  "license": "ISC",
+  "author": {
+    "name": "Luis Victor Belo"
+  },
+  "type": "module",
+  "main": "src/main",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "nest build",
+    "start:dev": "nest start --watch",
+    "start:prod": "node dist/main",
+    "lint": "eslint src/**/*.ts",
+    "prepublish": "npm run build",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.16",
+    "@nestjs/core": "^11.1.16",
+    "@nestjs/platform-express": "^11.1.16",
+    "reflect-metadata": "^0.2.2"
+  },
+  "files": [
+    "./bin/*",
+    "./lib/*"
+  ],
+  "typings": "./lib/index.d.ts",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@nestjs/cli": "^11.0.16",
+    "@tsconfig/node24": "^24.0.4",
+    "@types/express": "^5.0.6",
+    "eslint": "^10.0.3",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.57.0"
+  }
+}
