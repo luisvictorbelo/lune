@@ -25,9 +25,11 @@
   },
   "dependencies": {
     "@nestjs/common": "^11.1.16",
+    "@nestjs/config": "^4.0.3",
     "@nestjs/core": "^11.1.16",
     "@nestjs/platform-express": "^11.1.16",
-    "reflect-metadata": "^0.2.2"
+    "reflect-metadata": "^0.2.2",
+    "zod": "^4.3.6"
   },
   "files": [
     "./bin/*",
