@@ -1,4 +1,4 @@
-FROM node:22-alpine AS base
+FROM node:24-alpine AS base
 WORKDIR /app
 
 RUN apk add --no-cache dumb-init
@@ -20,7 +20,7 @@ FROM base AS production-deps
 RUN npm ci --omit=dev --ignore-scripts && npm cache clean --force
 
 
-FROM node:22-alpine AS production
+FROM node:24-alpine AS production
 WORKDIR /app
 ENV NODE_ENV=production
 

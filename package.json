@@ -21,7 +21,10 @@
     "start:prod": "node dist/main",
     "lint": "eslint src/**/*.ts",
     "prepublish": "npm run build",
-    "format": "prettier --write \"src/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\"",
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate",
+    "studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@nestjs/common": "^11.1.16",
