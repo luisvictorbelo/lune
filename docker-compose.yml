@@ -7,7 +7,7 @@ services:
       context: .
       target: development
     command: >
-      sh -c "if [ ! -d node_modules ] || [ -z \"$$(ls -A node_modules 2>/dev/null)\" ]; then npm ci --ignore-scripts; fi && npm run start:dev"
+      sh -c "if [ ! -d node_modules ] || [ -z "$$(ls -A node_modules 2>/dev/null)" ]; then npm ci --ignore-scripts; fi && npm run migrate && npm run start:dev"
     env_file:
       - .env.local
     environment:
@@ -63,6 +63,7 @@ services:
       timeout: 5s
       retries: 5
       start_period: 20s
+    command: sh -c "npm run migrate && node dist/main.js"
     profiles:
       - prod
 

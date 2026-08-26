@@ -34,7 +34,7 @@ EXPOSE 3000
 USER node
 
 ENTRYPOINT ["dumb-init", "--"]
-CMD ["node", "dist/main.js"]
+CMD ["sh", "-c", "npm run migrate && node dist/main.js"]
 
 
 FROM deps AS development
